@@ -5,7 +5,10 @@
 // [[Rcpp::plugins(cpp11)]]
 
 #include <math.h>
+
+#ifdef _OPENMP
 #include <omp.h>
+#endif
 
 #include "utils.h"
 
@@ -56,7 +59,7 @@ arma::rowvec hog_cpp(arma::mat image, int n_divs = 3, int n_bins = 6) {
     }
   }
   
-  arma::mat magnit = pow(pow(Ix, 2.0) + pow(Iy, 2.0), 0.5);
+  arma::mat magnit = arma::pow(arma::pow(Ix, 2.0) + arma::pow(Iy, 2.0), 0.5);
   
   arma::vec HOG = arma::zeros(n_HOG + 1);                                 // Initialize output HOG vector [ I added +1 otherwise it raises Error in some cases [ index = " (m * n_divs + n) * n_bins + nth_bin" == length(HOG) ]
 

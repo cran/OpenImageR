@@ -2,7 +2,10 @@
 // [[Rcpp::depends("RcppArmadillo")]]
 // [[Rcpp::plugins(openmp)]]
 // [[Rcpp::plugins(cpp11)]]
+
+#ifdef _OPENMP
 #include <omp.h>
+#endif
 
 #include "utils.h"
 

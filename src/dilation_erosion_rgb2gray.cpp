@@ -3,8 +3,9 @@
 // [[Rcpp::depends("RcppArmadillo")]]
 // [[Rcpp::plugins(cpp11)]]
 
+#ifdef _OPENMP
 #include <omp.h>
-
+#endif
 
 // dilation or erosion of an image   [ matrix ]
 //

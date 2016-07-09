@@ -5,7 +5,10 @@
 // [[Rcpp::depends("RcppArmadillo")]]
 // [[Rcpp::plugins(cpp11)]]
 
+#ifdef _OPENMP
 #include <omp.h>
+#endif
+
 #include "utils.h"
 
 #include <stdio.h>
@@ -26,8 +29,8 @@ std::string binary_to_hex(arma::mat x) {
   for (int i = 0; i < VEC.n_elem; i++) {
     
     if (VEC(i) == 1) {
-      
-      h += pow(2, mod(i,8));
+
+      h += std::pow(2.0, static_cast<double>(mod(i,8)));     // static_cast, so that pow(..) works
     }
     
     if (mod(i,8) == 7) {
@@ -365,8 +368,10 @@ arma::mat hash_image(arma::mat x, int new_width, int new_height, int hash_size =
   if (method == 2 && (hash_size >= x.n_rows || hash_size >= x.n_cols)) { Rcpp::stop("the hash size should be less than the original dimensions of the image");}
   
   if (method == 3 && (hash_size >= x.n_rows - 1 || hash_size >= x.n_cols - 1)) { Rcpp::stop("the hash size should be less than the (original dimensions - 1) of the image"); }
-
-  arma::mat out(x.n_rows, pow(hash_size,2), arma::fill::zeros);
+  
+  int tmp_cols_h = std::pow(static_cast<double>(hash_size), 2.0);    // static_cast to make pow(..) work AND int conversion, so that n_cols is an integer
+  
+  arma::mat out(x.n_rows, tmp_cols_h, arma::fill::zeros);
   
   #pragma omp parallel for schedule(static)
   for (int i = 0; i < x.n_rows; i++) {
@@ -409,7 +414,9 @@ arma::mat hash_image_cube(arma::cube x, int hash_size = 8, int highfreq_factor =
     
   if (method == 3 && (hash_size >= x.n_rows - 1 || hash_size >= x.n_cols - 1)) { Rcpp::stop("the hash size should be less than the (original dimensions - 1) of the image");}
   
-  arma::mat out(x.n_slices, pow(hash_size,2), arma::fill::zeros);
+  int tmp_cols_h = std::pow(static_cast<double>(hash_size), 2.0);    // static_cast to make pow(..) work AND int conversion, so that n_cols is an integer
+  
+  arma::mat out(x.n_slices, tmp_cols_h, arma::fill::zeros);
   
   #pragma omp parallel for schedule(static)
   for (int i = 0; i < x.n_slices; i++) {
