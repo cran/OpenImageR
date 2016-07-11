@@ -18,7 +18,7 @@
  * 
  * [ The HOG schema was taken from "https://github.com/lastlegion/SimpleCV/blob/develop/SimpleCV/ImageClass.py" ] 
  * 
- * please consult the COPYRIGHT file
+ * please consult the COPYRIGHTS file
  * 
  */
 
@@ -42,8 +42,8 @@ arma::rowvec hog_cpp(arma::mat image, int n_divs = 3, int n_bins = 6) {
   Ix = Ix.t();
   Iy = Iy.t();
   
-  int cellx = floor(width / n_divs);                                    // height of each cell(division)
-  int celly = floor(height / n_divs);                                   // width of each cell(division)
+  int cellx = width / n_divs;                                           // height of each cell(division)
+  int celly = height / n_divs;                                          // width of each cell(division)
   
   int img_area = height * width;                                        // Area of image
   
@@ -105,11 +105,15 @@ arma::rowvec hog_cpp(arma::mat image, int n_divs = 3, int n_bins = 6) {
 // [[Rcpp::export]]
 arma::mat HOG_matrix(arma::mat x, int height, int width, int n_divs = 3, int n_bins = 6, int threads = 1) {
   
+  #ifdef _OPENMP
   omp_set_num_threads(threads);
+  #endif
   
   arma::mat out(x.n_rows, n_divs * n_divs * n_bins);
   
-  #pragma omp parallel for schedule(static) 
+  #ifdef _OPENMP
+  #pragma omp parallel for schedule(static)
+  #endif
   for (int i = 0; i < out.n_rows; i++) {
     
     arma::mat tmp = vec2mat(x.row(i), height, width);
@@ -127,11 +131,15 @@ arma::mat HOG_matrix(arma::mat x, int height, int width, int n_divs = 3, int n_b
 // [[Rcpp::export]]
 arma::mat HOG_array(arma::cube x, int n_divs = 3, int n_bins = 6, int threads = 1) {
   
+  #ifdef _OPENMP
   omp_set_num_threads(threads);
+  #endif
   
   arma::mat out(x.n_slices, n_divs * n_divs * n_bins);
   
-  #pragma omp parallel for schedule(static) 
+  #ifdef _OPENMP
+  #pragma omp parallel for schedule(static)
+  #endif
   for (int i = 0; i < out.n_rows; i++) {
     
     out.row(i) =  hog_cpp(x.slice(i), n_divs, n_bins);
