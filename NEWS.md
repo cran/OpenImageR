@@ -1,4 +1,9 @@
 
+## OpenImageR 1.0.3
+
+I modified the error handling of the Augmentation function to correct an issue which occured due to the zca_comps parameter
+
+
 ## OpenImageR 1.0.2
 
 I did OpenMP optional for all cpp files due to the fact that the OSX OS does not currently support openMP ( r-devel-osx-x86_64-clang )
