@@ -61,6 +61,64 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// Gabor_Filter_Bank
+Rcpp::List Gabor_Filter_Bank(int u, int v, int m, int n, bool plot_data);
+RcppExport SEXP _OpenImageR_Gabor_Filter_Bank(SEXP uSEXP, SEXP vSEXP, SEXP mSEXP, SEXP nSEXP, SEXP plot_dataSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< int >::type u(uSEXP);
+    Rcpp::traits::input_parameter< int >::type v(vSEXP);
+    Rcpp::traits::input_parameter< int >::type m(mSEXP);
+    Rcpp::traits::input_parameter< int >::type n(nSEXP);
+    Rcpp::traits::input_parameter< bool >::type plot_data(plot_dataSEXP);
+    rcpp_result_gen = Rcpp::wrap(Gabor_Filter_Bank(u, v, m, n, plot_data));
+    return rcpp_result_gen;
+END_RCPP
+}
+// Gabor_export_Features
+Rcpp::List Gabor_export_Features(arma::Mat<double> img, int d1, int d2, int u, int v, int m, int n, bool downsample_vec, bool plot_data, bool normalize_features, int threads);
+RcppExport SEXP _OpenImageR_Gabor_export_Features(SEXP imgSEXP, SEXP d1SEXP, SEXP d2SEXP, SEXP uSEXP, SEXP vSEXP, SEXP mSEXP, SEXP nSEXP, SEXP downsample_vecSEXP, SEXP plot_dataSEXP, SEXP normalize_featuresSEXP, SEXP threadsSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< arma::Mat<double> >::type img(imgSEXP);
+    Rcpp::traits::input_parameter< int >::type d1(d1SEXP);
+    Rcpp::traits::input_parameter< int >::type d2(d2SEXP);
+    Rcpp::traits::input_parameter< int >::type u(uSEXP);
+    Rcpp::traits::input_parameter< int >::type v(vSEXP);
+    Rcpp::traits::input_parameter< int >::type m(mSEXP);
+    Rcpp::traits::input_parameter< int >::type n(nSEXP);
+    Rcpp::traits::input_parameter< bool >::type downsample_vec(downsample_vecSEXP);
+    Rcpp::traits::input_parameter< bool >::type plot_data(plot_dataSEXP);
+    Rcpp::traits::input_parameter< bool >::type normalize_features(normalize_featuresSEXP);
+    Rcpp::traits::input_parameter< int >::type threads(threadsSEXP);
+    rcpp_result_gen = Rcpp::wrap(Gabor_export_Features(img, d1, d2, u, v, m, n, downsample_vec, plot_data, normalize_features, threads));
+    return rcpp_result_gen;
+END_RCPP
+}
+// Gabor_generate
+Rcpp::List Gabor_generate(arma::Mat<double>& img_data, int img_nrow, int img_ncol, int d1, int d2, int u, int v, int m, int n, bool downsample_vec, bool normalize_features, int threads);
+RcppExport SEXP _OpenImageR_Gabor_generate(SEXP img_dataSEXP, SEXP img_nrowSEXP, SEXP img_ncolSEXP, SEXP d1SEXP, SEXP d2SEXP, SEXP uSEXP, SEXP vSEXP, SEXP mSEXP, SEXP nSEXP, SEXP downsample_vecSEXP, SEXP normalize_featuresSEXP, SEXP threadsSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< arma::Mat<double>& >::type img_data(img_dataSEXP);
+    Rcpp::traits::input_parameter< int >::type img_nrow(img_nrowSEXP);
+    Rcpp::traits::input_parameter< int >::type img_ncol(img_ncolSEXP);
+    Rcpp::traits::input_parameter< int >::type d1(d1SEXP);
+    Rcpp::traits::input_parameter< int >::type d2(d2SEXP);
+    Rcpp::traits::input_parameter< int >::type u(uSEXP);
+    Rcpp::traits::input_parameter< int >::type v(vSEXP);
+    Rcpp::traits::input_parameter< int >::type m(mSEXP);
+    Rcpp::traits::input_parameter< int >::type n(nSEXP);
+    Rcpp::traits::input_parameter< bool >::type downsample_vec(downsample_vecSEXP);
+    Rcpp::traits::input_parameter< bool >::type normalize_features(normalize_featuresSEXP);
+    Rcpp::traits::input_parameter< int >::type threads(threadsSEXP);
+    rcpp_result_gen = Rcpp::wrap(Gabor_generate(img_data, img_nrow, img_ncol, d1, d2, u, v, m, n, downsample_vec, normalize_features, threads));
+    return rcpp_result_gen;
+END_RCPP
+}
 // hog_cpp
 arma::rowvec hog_cpp(arma::mat image, int n_divs, int n_bins);
 RcppExport SEXP _OpenImageR_hog_cpp(SEXP imageSEXP, SEXP n_divsSEXP, SEXP n_binsSEXP) {

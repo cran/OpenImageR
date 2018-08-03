@@ -32,6 +32,18 @@ rgb_2gray <- function(RGB_image) {
     .Call(`_OpenImageR_rgb_2gray`, RGB_image)
 }
 
+Gabor_Filter_Bank <- function(u, v, m, n, plot_data = FALSE) {
+    .Call(`_OpenImageR_Gabor_Filter_Bank`, u, v, m, n, plot_data)
+}
+
+Gabor_export_Features <- function(img, d1, d2, u, v, m, n, downsample_vec = FALSE, plot_data = FALSE, normalize_features = FALSE, threads = 1L) {
+    .Call(`_OpenImageR_Gabor_export_Features`, img, d1, d2, u, v, m, n, downsample_vec, plot_data, normalize_features, threads)
+}
+
+Gabor_generate <- function(img_data, img_nrow, img_ncol, d1, d2, u, v, m, n, downsample_vec = FALSE, normalize_features = FALSE, threads = 1L) {
+    .Call(`_OpenImageR_Gabor_generate`, img_data, img_nrow, img_ncol, d1, d2, u, v, m, n, downsample_vec, normalize_features, threads)
+}
+
 hog_cpp <- function(image, n_divs = 3L, n_bins = 6L) {
     .Call(`_OpenImageR_hog_cpp`, image, n_divs, n_bins)
 }

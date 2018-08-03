@@ -1,4 +1,10 @@
 
+
+## OpenImageR 1.0.9
+
+I added the *GaborFeatureExtract* R6 class, which as the name suggests extracts Gabor features from images (I updated the documentation and Vignettes too)
+
+
 ## OpenImageR 1.0.8
 
 I added the *DARMA_64BIT_WORD* flag in the Makevars file to allow the package processing big datasets
