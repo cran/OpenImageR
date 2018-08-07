@@ -12,7 +12,7 @@
 
 <meta name="author" content="Lampros Mouselimis" />
 
-<meta name="date" content="2018-08-04" />
+<meta name="date" content="2018-08-06" />
 
 <title>Gabor Feature extraction</title>
 
@@ -70,7 +70,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <h1 class="title toc-ignore">Gabor Feature extraction</h1>
 <h4 class="author"><em>Lampros Mouselimis</em></h4>
-<h4 class="date"><em>2018-08-04</em></h4>
+<h4 class="date"><em>2018-08-06</em></h4>
 
 
 
@@ -177,7 +177,7 @@ List of <span class="dv">3</span>
 <div id="gabor_feature_extraction" class="section level3">
 <h3>gabor_feature_extraction</h3>
 <p><br></p>
-<p>The <strong>gabor_feature_extraction</strong> method extracts the Gabor Features of the image. This method is modified in comparison to the initial Matlab code to give users the option to downsample the image or to normalize the features. Moreover, I added the <strong>Magnitude</strong> feature because according to literature it improves predictability.</p>
+<p>The <strong>gabor_feature_extraction</strong> method extracts the Gabor Features of the image. This method is modified in comparison to the initial Matlab code to give users the option to downsample the image or to normalize the features. Moreover, I added the <strong>Magnitude</strong> feature because according to <a href="https://www.researchgate.net/publication/283539985_Gabor_Feature_Based_Unsupervised_Change_Detection_of_Multitemporal_SAR_Images_Based_on_Two-Level_Clustering">literature</a> it improves predictability.</p>
 <p>Based on the previously mentioned <em>car.png</em> image,</p>
 <p><br></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">
@@ -408,6 +408,7 @@ acc_fit_gab_hog =<span class="st"> </span><span class="kw">unlist</span>(<span c
 <li><a href="https://github.com/mhaghighat/gabor" class="uri">https://github.com/mhaghighat/gabor</a></li>
 <li><a href="https://stackoverflow.com/questions/20608458/gabor-feature-extraction">Gabor feature extraction Stackoverflow question</a></li>
 <li><a href="http://www.paper.edu.cn/scholar/showpdf/NUz2MN4IMTD0kxeQh">Features Extraction using a Gabor Filter Family</a></li>
+<li><a href="https://www.researchgate.net/publication/283539985_Gabor_Feature_Based_Unsupervised_Change_Detection_of_Multitemporal_SAR_Images_Based_on_Two-Level_Clustering">Gabor Feature Based Unsupervised Change Detection of Multitemporal SAR Images Based on Two-Level Clustering</a></li>
 </ul>
 <p><br><br></p>
 </div>

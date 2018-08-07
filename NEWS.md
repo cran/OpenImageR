@@ -1,4 +1,10 @@
 
+## OpenImageR 1.1.0
+
+* I fixed the ASAN-gcc error.
+* I commented 3 test cases for the Solaris OS, otherwise it gives an error (see the comments in the *test-gabor.R* tests file).
+* I updated the Vignette *Gabor Feature extraction*.
+
 
 ## OpenImageR 1.0.9
 

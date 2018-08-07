@@ -125,7 +125,7 @@ The documentation includes more details for each of the parameters used.
 
 <br>
 
-The **gabor_feature_extraction** method extracts the Gabor Features of the image. This method is modified in comparison to the initial Matlab code to give users the option to downsample the image or to normalize the features. Moreover, I added the **Magnitude** feature because according to literature it improves predictability.
+The **gabor_feature_extraction** method extracts the Gabor Features of the image. This method is modified in comparison to the initial Matlab code to give users the option to downsample the image or to normalize the features. Moreover, I added the **Magnitude** feature because according to [literature](https://www.researchgate.net/publication/283539985_Gabor_Feature_Based_Unsupervised_Change_Detection_of_Multitemporal_SAR_Images_Based_on_Two-Level_Clustering) it improves predictability.
 
 Based on the previously mentioned *car.png* image, 
 
@@ -440,6 +440,7 @@ mean(acc_fit_gab_hog)
 * [https://github.com/mhaghighat/gabor](https://github.com/mhaghighat/gabor)
 * [Gabor feature extraction Stackoverflow question](https://stackoverflow.com/questions/20608458/gabor-feature-extraction)
 * [Features Extraction using a Gabor Filter Family](http://www.paper.edu.cn/scholar/showpdf/NUz2MN4IMTD0kxeQh)
+* [Gabor Feature Based Unsupervised Change Detection of Multitemporal SAR Images Based on Two-Level Clustering](https://www.researchgate.net/publication/283539985_Gabor_Feature_Based_Unsupervised_Change_Detection_of_Multitemporal_SAR_Images_Based_on_Two-Level_Clustering)
 
 <br><br>
 

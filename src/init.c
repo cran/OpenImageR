@@ -38,6 +38,7 @@ extern SEXP _OpenImageR_im_flip(SEXP, SEXP);
 extern SEXP _OpenImageR_im_flip_cube(SEXP, SEXP);
 extern SEXP _OpenImageR_indices(SEXP, SEXP);
 extern SEXP _OpenImageR_indices_bilinear(SEXP, SEXP);
+extern SEXP _OpenImageR_inner_bilinear(SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP);
 extern SEXP _OpenImageR_inner_dilate_erode(SEXP, SEXP, SEXP, SEXP, SEXP, SEXP);
 extern SEXP _OpenImageR_inner_hash_im(SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP);
 extern SEXP _OpenImageR_inner_hash_im_cube(SEXP, SEXP, SEXP, SEXP, SEXP, SEXP);
@@ -108,6 +109,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_OpenImageR_im_flip_cube",                       (DL_FUNC) &_OpenImageR_im_flip_cube,                        2},
     {"_OpenImageR_indices",                            (DL_FUNC) &_OpenImageR_indices,                             2},
     {"_OpenImageR_indices_bilinear",                   (DL_FUNC) &_OpenImageR_indices_bilinear,                    2},
+    {"_OpenImageR_inner_bilinear",                     (DL_FUNC) &_OpenImageR_inner_bilinear,                      9},
     {"_OpenImageR_inner_dilate_erode",                 (DL_FUNC) &_OpenImageR_inner_dilate_erode,                  6},
     {"_OpenImageR_inner_hash_im",                      (DL_FUNC) &_OpenImageR_inner_hash_im,                       8},
     {"_OpenImageR_inner_hash_im_cube",                 (DL_FUNC) &_OpenImageR_inner_hash_im_cube,                  6},

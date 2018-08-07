@@ -220,6 +220,10 @@ seq_rcpp_range <- function(start, end) {
     .Call(`_OpenImageR_seq_rcpp_range`, start, end)
 }
 
+inner_bilinear <- function(t, s, image, method, n, m, mm, nn, thet) {
+    .Call(`_OpenImageR_inner_bilinear`, t, s, image, method, n, m, mm, nn, thet)
+}
+
 rotate_nearest_bilinear <- function(image, angle, method, mode, threads) {
     .Call(`_OpenImageR_rotate_nearest_bilinear`, image, angle, method, mode, threads)
 }

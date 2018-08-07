@@ -708,6 +708,25 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// inner_bilinear
+double inner_bilinear(int t, int s, arma::mat& image, std::string& method, int n, int m, int mm, int nn, double thet);
+RcppExport SEXP _OpenImageR_inner_bilinear(SEXP tSEXP, SEXP sSEXP, SEXP imageSEXP, SEXP methodSEXP, SEXP nSEXP, SEXP mSEXP, SEXP mmSEXP, SEXP nnSEXP, SEXP thetSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< int >::type t(tSEXP);
+    Rcpp::traits::input_parameter< int >::type s(sSEXP);
+    Rcpp::traits::input_parameter< arma::mat& >::type image(imageSEXP);
+    Rcpp::traits::input_parameter< std::string& >::type method(methodSEXP);
+    Rcpp::traits::input_parameter< int >::type n(nSEXP);
+    Rcpp::traits::input_parameter< int >::type m(mSEXP);
+    Rcpp::traits::input_parameter< int >::type mm(mmSEXP);
+    Rcpp::traits::input_parameter< int >::type nn(nnSEXP);
+    Rcpp::traits::input_parameter< double >::type thet(thetSEXP);
+    rcpp_result_gen = Rcpp::wrap(inner_bilinear(t, s, image, method, n, m, mm, nn, thet));
+    return rcpp_result_gen;
+END_RCPP
+}
 // rotate_nearest_bilinear
 arma::mat rotate_nearest_bilinear(arma::mat& image, double angle, std::string& method, std::string mode, int threads);
 RcppExport SEXP _OpenImageR_rotate_nearest_bilinear(SEXP imageSEXP, SEXP angleSEXP, SEXP methodSEXP, SEXP modeSEXP, SEXP threadsSEXP) {
