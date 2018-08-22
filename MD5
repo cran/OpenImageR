@@ -1,6 +1,6 @@
-90ae05a522121fc3d1a071f1947d213b *DESCRIPTION
+cbb4802d4b397a7f241512092387169e *DESCRIPTION
 6360d039136fca1268c98c2466f33e3d *NAMESPACE
-ae2d25e80857ce21534bac0f61df2f28 *NEWS.md
+bb03a382088b0448429999a5b12befd3 *NEWS.md
 f2e287cd71324a5466893c8bd7108c6f *R/RcppExports.R
 18acf7b3a2f38919c4c14ae22491c301 *R/gabor_feature_extraction.R
 9d9e42708e35ca2b6f14aee2fa707521 *R/hash_functions.R
@@ -10,14 +10,14 @@ c875ae35b95e9bcc7607c06ce05ffc95 *R/open_image_rscript.R
 889369684a71bf507ee98694051f533c *R/read_image.R
 6d758be4d11e2f0095bb979c43666b19 *R/shiny_rscript.R
 635c28c247f94223d60a7c73232147d1 *R/write_image.R
-b96d5d99b98fa717f6c5d8d9a4be2a4f *README.md
+868c52361fb501522ec40e7939de1c30 *README.md
 dcbe332b0e0b9edf64118d3700fd731b *build/vignette.rds
 25950adfc48304f602f1a1e6b00ab736 *inst/COPYRIGHTS
 26220bf5e5f87a74d04aa583bf8268ae *inst/doc/Gabor_Feature_Extraction.Rmd
-6ee1e3e5d0928adecdea7074eaa7bd7a *inst/doc/Gabor_Feature_Extraction.html
+071887bfa6feec04a3bc5515e8a09321 *inst/doc/Gabor_Feature_Extraction.html
 714c9451e83dc6e39be267f8c3bab6df *inst/doc/The_OpenImageR_package.R
 b9368ac15252f81aebd91dcd07e9a068 *inst/doc/The_OpenImageR_package.Rmd
-b40c427a704091c3990ee60d0aca0343 *inst/doc/The_OpenImageR_package.html
+f0cae4759019b65bed79430d18fd3a0c *inst/doc/The_OpenImageR_package.html
 c149d92c4a52461e3052e45205e7af7e *inst/shiny_app/server.R
 43447142685b65898e1096ede6a4748b *inst/shiny_app/ui.R
 fb62245955519c4a6f808710739e7572 *inst/tmp_images/1.png
@@ -79,7 +79,7 @@ f03f7b8bf0cd6ecf59b0d90fc14907e6 *src/gabor_feature_extraction.cpp
 fbb6e8f0a78f530dabc73aa51a3e8a74 *src/hog_features.cpp
 f545c3b2a0b0aa71b6a8988b62f04afd *src/image_hashing.cpp
 906aa86b8e6c7f02e22003c47c2cdec0 *src/init.c
-bd9ecf1d1cb91f155797cf039df393e3 *src/utils.cpp
+4ad32022d54dc469d09918b2671f7ef7 *src/utils.cpp
 5d5949a20fa0b008d0a0458dc6233179 *src/utils.h
 3e0d96990cfaa563d7591503cab3622d *tests/testthat.R
 fb62245955519c4a6f808710739e7572 *tests/testthat/image_files/1.png
