@@ -150,11 +150,11 @@ The author of the article utilizes,
 * the *negative Euclidean distance* (although the author uses 3 different similarity measures (page 1526), I'll use the first one in my code because it gives better results)
 * *weights for the 3 colour channels* (wL, wA, wB) because they keep balance so as to be consistent with human perception
 * a *colorradius* to adjust the number of clusters. If its value is low, the number of targets would increase, which leads to more detailed segmentation results
-* the [Berkeley Segmentation Database (BSD)](https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/resources.html)
+* the [Berkeley Segmentation Database (BSD)](https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/resources.html) (it can be downloaded also from my [Github repository](https://github.com/mlampros/DataSets))
 
 <br>
 
-I bundled the code in an R package, **SuperpixelImageSegmentation** ( *github.com/mlampros/SuperpixelImageSegmentation* ), which can be downloaded from Github (consult the README.md file of the package for more information). The following code snippet first reads the input image and then performs image segmentation based on SLIC superpixels and AP clustering,
+I bundled the code in an R package, [SuperpixelImageSegmentation](https://github.com/mlampros/SuperpixelImageSegmentation), which can be downloaded from Github (consult the README.md file of the package for more information). The following code snippet first reads the input image and then performs image segmentation based on SLIC superpixels and AP clustering,
 
 <br>
 
@@ -385,11 +385,11 @@ Elapsed time: 0 hours and 0 minutes and 3 seconds.
 
 <br>
 
-```R
+The following image is based on *Superpixels + AP + Mini-Batch-Kmeans*,
 
-#-------------------------------------
-# Superpixels + AP + Mini-Batch-Kmeans
-#-------------------------------------
+<br>
+
+```R
 
 OpenImageR::imageShow(spx_mbkm$KMeans_image_data)
 
@@ -405,7 +405,7 @@ Further parameters which can be adjusted in the *spixel_segmentation()* method a
 * *method* ("slic", "slico")
 * *colour_type* ("RGB", "LAB" or "HSV")
 
-More details can be found in the *SuperpixelImageSegmentation* R package documentation.
+More details can be found in the [SuperpixelImageSegmentation](https://github.com/mlampros/SuperpixelImageSegmentation) R package documentation.
 
 <br>
 
@@ -496,6 +496,7 @@ init$spixel_masks_show(display_all = TRUE)
 * [Clustering by Passing Messages Between Data Points, Brendan J. Frey and Delbert Dueck, University of Toronto, Science 315, 972-976, February 2007](https://www.psi.toronto.edu/affinitypropagation/FreyDueckScience07.pdf)
 * [CIELAB colour space](https://en.wikipedia.org/wiki/CIELAB_color_space)
 * [Berkeley Segmentation Database (BSD)](https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/resources.html)
-* [OpenImageR](https://github.com/mlampros/OpenImageR) 
-* [ClusterR](https://github.com/mlampros/ClusterR)
+* [OpenImageR package](https://github.com/mlampros/OpenImageR) 
+* [ClusterR package](https://github.com/mlampros/ClusterR)
+* [SuperpixelImageSegmentation package](https://github.com/mlampros/SuperpixelImageSegmentation)
 
