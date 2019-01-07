@@ -2,7 +2,7 @@
 
 library(OpenImageR)
 
-path = 'image1.jpeg'
+path = file.path(getwd(), 'vignette_1', 'image1.jpeg')
 
 im = readImage(path)
 dim(im)
@@ -20,7 +20,7 @@ imageShow(im)
 
 ## ----fig.width = 1.0, fig.height = 1.0, echo = T, eval = T---------------
 
-path = 'image2.jpg'
+path = file.path(getwd(), 'vignette_1', 'image2.jpg')
 
 im = readImage(path)
 
@@ -48,7 +48,7 @@ imageShow(us_def)
 
 ## ----fig.width = 1.0, fig.height = 1.0, echo = T, eval = T---------------
 
-path = 'image1.jpeg'
+path = file.path(getwd(), 'vignette_1', 'image1.jpeg')
 
 im = readImage(path)
 
@@ -79,7 +79,7 @@ imageShow(r45)
 
 ## ----fig.width = 1.0, fig.height = 1.0, echo = T, eval = T---------------
 
-path = 'image2.jpg'
+path = file.path(getwd(), 'vignette_1', 'image2.jpg')
 
 im = readImage(path)
 
@@ -105,7 +105,7 @@ imageShow(tr)
 
 ## ----fig.width = 1.0, fig.height = 1.0, echo = T, eval = T---------------
 
-path = 'image1.jpeg'
+path = file.path(getwd(), 'vignette_1', 'image1.jpeg')
 
 im = readImage(path)
 
@@ -126,7 +126,7 @@ unif_filt
 
 ## ----fig.width = 1.0, fig.height = 1.0, echo = T, eval = T---------------
 
-path = 'image2.jpg'
+path = file.path(getwd(), 'vignette_1', 'image2.jpg')
 
 im = readImage(path)
 
@@ -165,7 +165,7 @@ imageShow(res_erosion)
 
 ## ----fig.width = 1.0, fig.height = 1.0, echo = T, eval = T---------------
 
-path = 'image1.jpeg'
+path = file.path(getwd(), 'vignette_1', 'image1.jpeg')
 
 im = readImage(path)
 
@@ -227,7 +227,9 @@ imageShow(res[[3]])
 
 ## ---- eval = T-----------------------------------------------------------
 
-image = readImage('image2.jpg')
+path = file.path(getwd(), 'vignette_1', 'image2.jpg')
+
+image = readImage(path)
 
 image = image * 255
 
@@ -237,8 +239,11 @@ hog
 
 ## ---- eval = T-----------------------------------------------------------
 
-tmp_im1 = readImage('image1.jpeg')
-tmp_im2 = readImage('image2.jpg')
+path_im1 = file.path(getwd(), 'vignette_1', 'image1.jpeg')
+path_im2 = file.path(getwd(), 'vignette_1', 'image2.jpg')
+
+tmp_im1 = readImage(path_im1)
+tmp_im2 = readImage(path_im2)
 
 tmp_im1 = resizeImage(tmp_im1, 200, 200)
 tmp_im2 = resizeImage(tmp_im2, 200, 200)
@@ -257,7 +262,9 @@ res
 
 ## ----fig.width = 1.0, fig.height = 1.0, echo = T, eval = T---------------
 
-image = readImage('view1.jpg')
+path = file.path(getwd(), 'vignette_1', 'view1.jpg')
+
+image = readImage(path)
 
 imageShow(image)
 
@@ -272,7 +279,9 @@ as.vector(aveg_bin)
 
 ## ----fig.width = 1.0, fig.height = 1.0, echo = T, eval = T---------------
 
-image2 = readImage('view2.jpg')
+path = file.path(getwd(), 'vignette_1', 'view2.jpg')
+
+image2 = readImage(path)
 
 imageShow(image2)
 
@@ -287,7 +296,9 @@ as.vector(ph_bin)
 
 ## ----fig.width = 1.0, fig.height = 1.0, echo = T, eval = T---------------
 
-image3 = readImage('view3.jpg')
+path = file.path(getwd(), 'vignette_1', 'view3.jpg')
+
+image3 = readImage(path)
 
 imageShow(image3)
 
