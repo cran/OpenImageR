@@ -1,8 +1,9 @@
 
+
 ## OpenImageR
 <br>
 
-The OpenImageR package is an image processing library. It includes functions for image preprocessing, filtering and image recognition. More details on the functionality of OpenImageR can be found in the [first](http://mlampros.github.io/2016/07/08/OpenImageR/), [second](http://mlampros.github.io/2018/08/08/Gabor_Feature_Extraction/) and [third](http://mlampros.github.io/2018/11/09/Image_Segmentation_Superpixels_Clustering/) blog-posts, and in the package Documentation. 
+The OpenImageR package is an image processing library. It includes functions for image preprocessing, filtering and image recognition. More details on the functionality of OpenImageR can be found in the [first](http://mlampros.github.io/2016/07/08/OpenImageR/), [second](http://mlampros.github.io/2018/08/08/Gabor_Feature_Extraction/) and [third](http://mlampros.github.io/2018/11/09/Image_Segmentation_Superpixels_Clustering/) blog-posts, and in the package Documentation  ( *scroll down for information on how to use the* **docker image** )
 <br><br>
 
 
@@ -89,10 +90,10 @@ A *complete minimal example* would be :
 
 
 // [[Rcpp::export]]
-arma::mat rgb_2gray(arma::cube RGB_image) {
+arma::mat rgb_2gray_exp(arma::cube RGB_image) {
 
   oimageR::Utility_functions UTLF;
-  return UTLF.rgb_2gray(RGB_image);
+  return UTLF.rgb_2gray_rcpp(RGB_image);
 }
 
 
@@ -100,7 +101,7 @@ arma::mat rgb_2gray(arma::cube RGB_image) {
 
 <br>
 
-Then, by opening an R file a user can call the *rgb_2gray* function using,
+Then, by opening an R file a user can call the *rgb_2gray_exp* function using,
 
 <br>
 
@@ -111,7 +112,7 @@ Rcpp::sourceCpp('example.cpp')              # assuming that the previous Rcpp co
 set.seed(1)
 im_rgb = array(runif(30000), c(100, 100, 3))
 
-im_grey = rgb_2gray(im_rgb)
+im_grey = rgb_2gray_exp(im_rgb)
 
 str(im_grey)
 
@@ -123,3 +124,87 @@ Use the following link to report bugs/issues,
 <br><br>
 
 [https://github.com/mlampros/OpenImageR/issues](https://github.com/mlampros/OpenImageR/issues)
+
+
+<br>
+
+
+**UPDATE 29-11-2019**
+
+<br>
+
+**Docker images** of the *OpenImageR* package are available to download from my [dockerhub](https://hub.docker.com/r/mlampros/openimager) account. The images come with *Rstudio* and the *R-development* version (latest) installed. The whole process was tested on Ubuntu 18.04. To **pull** & **run** the image do the following,
+
+<br>
+
+```R
+
+docker pull mlampros/openimager:rstudiodev
+
+docker run -d --name rstudio_dev -e USER=rstudio -e PASSWORD=give_here_your_password --rm -p 8787:8787 mlampros/openimager:rstudiodev
+
+```
+
+<br>
+
+The user can also **bind** a home directory / folder to the image to use its files by specifying the **-v** command,
+
+<br>
+
+```R
+
+docker run -d --name rstudio_dev -e USER=rstudio -e PASSWORD=give_here_your_password --rm -p 8787:8787 -v /home/YOUR_DIR:/home/rstudio/YOUR_DIR mlampros/openimager:rstudiodev
+
+
+```
+
+<br>
+
+In the latter case you might have first give permission privileges for write access to **YOUR_DIR** directory (not necessarily) using,
+
+<br>
+
+```R
+
+chmod -R 777 /home/YOUR_DIR
+
+
+```
+
+<br>
+
+The **USER** defaults to *rstudio* but you have to give your **PASSWORD** of preference (see [www.rocker-project.org](https://www.rocker-project.org/) for more information).
+
+<br>
+
+Open your web-browser and depending where the docker image was *build / run* give, 
+
+<br>
+
+**1st. Option** on your personal computer,
+
+<br>
+
+```R
+http://0.0.0.0:8787 
+
+```
+
+<br>
+
+**2nd. Option** on a cloud instance, 
+
+<br>
+
+```R
+http://Public DNS:8787
+
+```
+
+<br>
+
+to access the Rstudio console in order to give your username and password.
+
+<br>
+
+
