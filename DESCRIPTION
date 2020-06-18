@@ -1,8 +1,8 @@
 Package: OpenImageR
 Type: Package
 Title: An Image Processing Toolkit
-Version: 1.1.6
-Date: 2019-11-30
+Version: 1.1.7
+Date: 2020-06-18
 Depends: R(>= 3.2.3)
 Imports: Rcpp (>= 0.12.17), graphics, grid, shiny, jpeg, png, tiff, R6
 Authors@R: c( person("Lampros", "Mouselimis", email = "mouselimislampros@gmail.com", role = c("aut", "cre")), person("Sight", "Machine", role = "cph", comment = "findHOGFeatures function of the SimpleCV computer vision platform"), person("Johannes", "Buchner", role = "cph", comment = "average_hash, dhash and phash functions of the ImageHash python library"), person("Mohammad", "Haghighat", email = "haghighat@ieee.org", role = "cph", comment = "Gabor Feature Extraction"), person("Radhakrishna", "Achanta", email = "Radhakrishna.Achanta@epfl.ch", role = "cph", comment = "Author of the C++ code of the SLIC and SLICO algorithms (for commercial use please contact the author)") )
@@ -23,10 +23,10 @@ SystemRequirements: libarmadillo: apt-get install -y libarmadillo-dev
         libtiff5-dev (deb)
 LinkingTo: Rcpp, RcppArmadillo (>= 0.8.0)
 Suggests: testthat, knitr, rmarkdown, covr
-RoxygenNote: 7.0.1
+RoxygenNote: 7.1.0
 VignetteBuilder: knitr
 NeedsCompilation: yes
-Packaged: 2019-11-30 11:51:52 UTC; lampros
+Packaged: 2020-06-18 17:54:09 UTC; lampros
 Author: Lampros Mouselimis [aut, cre],
   Sight Machine [cph] (findHOGFeatures function of the SimpleCV computer
     vision platform),
@@ -36,4 +36,4 @@ Author: Lampros Mouselimis [aut, cre],
   Radhakrishna Achanta [cph] (Author of the C++ code of the SLIC and
     SLICO algorithms (for commercial use please contact the author))
 Repository: CRAN
-Date/Publication: 2019-12-01 23:00:35 UTC
+Date/Publication: 2020-06-18 18:40:07 UTC
