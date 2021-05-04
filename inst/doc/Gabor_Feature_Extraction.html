@@ -12,10 +12,35 @@
 
 <meta name="author" content="Lampros Mouselimis" />
 
-<meta name="date" content="2020-06-18" />
+<meta name="date" content="2021-05-04" />
 
 <title>Gabor Feature extraction</title>
 
+<script>// Hide empty <a> tag within highlighted CodeBlock for screen reader accessibility (see https://github.com/jgm/pandoc/issues/6352#issuecomment-626106786) -->
+// v0.0.1
+// Written by JooYoung Seo (jooyoung@psu.edu) and Atsushi Yasumoto on June 1st, 2020.
+
+document.addEventListener('DOMContentLoaded', function() {
+  const codeList = document.getElementsByClassName("sourceCode");
+  for (var i = 0; i < codeList.length; i++) {
+    var linkList = codeList[i].getElementsByTagName('a');
+    for (var j = 0; j < linkList.length; j++) {
+      if (linkList[j].innerHTML === "") {
+        linkList[j].setAttribute('aria-hidden', 'true');
+      }
+    }
+  }
+});
+</script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
 
 
 <style type="text/css">code{white-space: pre;}</style>
@@ -106,6 +131,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   }
 })();
 </script>
+
 
 
 
@@ -303,11 +329,11 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 <h1 class="title toc-ignore">Gabor Feature extraction</h1>
 <h4 class="author">Lampros Mouselimis</h4>
-<h4 class="date">2020-06-18</h4>
+<h4 class="date">2021-05-04</h4>
 
 
 
-<p>In this Vignette, I’ll illustrate the new functionality of the OpenImageR package (<em>Gabor Feature Extraction</em>). The Gabor features have been used extensively in <a href="https://en.wikipedia.org/wiki/Gabor_filter">image analysis and processing</a> (Character and Face recognition). <a href="https://en.wikipedia.org/wiki/Dennis_Gabor">Gabor</a> (Nobel prize winner, an electrical engineer, and physicist) used the following wording which I think it’s worth mentioning in this Vignette, <em>“You can’t predict the future, but you can invent it.”</em> (<a href="http://www.it.lut.fi/project/gabor/">source</a>).</p>
+<p>In this Vignette, I’ll illustrate the new functionality of the OpenImageR package (<em>Gabor Feature Extraction</em>). The Gabor features have been used extensively in <a href="https://en.wikipedia.org/wiki/Gabor_filter">image analysis and processing</a> (Character and Face recognition). <a href="https://en.wikipedia.org/wiki/Dennis_Gabor">Gabor</a> (Nobel prize winner, an electrical engineer, and physicist) used the following wording which I think it’s worth mentioning in this Vignette, <em>“You can’t predict the future, but you can invent it.”</em> (<a href="https://www.it.lut.fi/project/gabor/">source</a>).</p>
 <p>In the following lines I’ll describe the <em>GaborFeatureExtract</em> R6 class which includes the following methods,</p>
 <table>
 <thead>
@@ -628,7 +654,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <ul>
 <li><a href="https://github.com/mhaghighat/gabor">https://github.com/mhaghighat/gabor</a></li>
 <li><a href="https://stackoverflow.com/questions/20608458/gabor-feature-extraction">Gabor feature extraction Stackoverflow question</a></li>
-<li><a href="http://www.paper.edu.cn/scholar/showpdf/NUz2MN4IMTD0kxeQh">Features Extraction using a Gabor Filter Family</a></li>
+<li><a href="https://www.actapress.com/PaperInfo.aspx?PaperID=18070&amp;reason=500">Features Extraction using a Gabor Filter Family</a></li>
 <li><a href="https://www.researchgate.net/publication/283539985_Gabor_Feature_Based_Unsupervised_Change_Detection_of_Multitemporal_SAR_Images_Based_on_Two-Level_Clustering">Gabor Feature Based Unsupervised Change Detection of Multitemporal SAR Images Based on Two-Level Clustering</a></li>
 </ul>
 <p><br><br></p>
