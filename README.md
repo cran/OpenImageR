@@ -206,4 +206,20 @@ to access the Rstudio console in order to give your username and password.
 
 <br>
 
+### **Citation:**
 
+If you use the code of this repository in your paper or research please cite both **OpenImageR** and the **original articles / software** `https://CRAN.R-project.org/package=OpenImageR`:
+
+<br>
+
+```R
+@Manual{,
+  title = {{OpenImageR}: An Image Processing Toolkit},
+  author = {Lampros Mouselimis},
+  year = {2021},
+  note = {R package version 1.1.8},
+  url = {https://CRAN.R-project.org/package=OpenImageR},
+}
+```
+
+<br>
