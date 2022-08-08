@@ -1,11 +1,9 @@
 Package: OpenImageR
 Type: Package
 Title: An Image Processing Toolkit
-Version: 1.2.2
-Date: 2022-06-07
-Depends: R(>= 3.2.3)
-Imports: Rcpp (>= 0.12.17), graphics, grid, shiny, jpeg, png, tiff, R6
-Authors@R: c( person("Lampros", "Mouselimis", email = "mouselimislampros@gmail.com", role = c("aut", "cre"), comment = c(ORCID = "https://orcid.org/0000-0002-8024-1546")), person("Sight", "Machine", role = "cph", comment = "findHOGFeatures function of the SimpleCV computer vision platform"), person("Johannes", "Buchner", role = "cph", comment = "average_hash, dhash and phash functions of the ImageHash python library"), person("Mohammad", "Haghighat", email = "haghighat@ieee.org", role = "cph", comment = "Gabor Feature Extraction"), person("Radhakrishna", "Achanta", email = "Radhakrishna.Achanta@epfl.ch", role = "cph", comment = "Author of the C++ code of the SLIC and SLICO algorithms (for commercial use please contact the author)") )
+Version: 1.2.3
+Date: 2022-08-08
+Authors@R: c( person("Lampros", "Mouselimis", email = "mouselimislampros@gmail.com", role = c("aut", "cre"), comment = c(ORCID = "https://orcid.org/0000-0002-8024-1546")), person("Sight", "Machine", role = "cph", comment = "findHOGFeatures function of the SimpleCV computer vision platform"), person("Johannes", "Buchner", role = "cph", comment = "average_hash, dhash and phash functions of the ImageHash python library"), person("Mohammad", "Haghighat", email = "haghighat@ieee.org", role = "cph", comment = "Gabor Feature Extraction"), person("Radhakrishna", "Achanta", email = "Radhakrishna.Achanta@epfl.ch", role = "cph", comment = "Author of the C++ code of the SLIC and SLICO algorithms (for commercial use please contact the author)"), person("Oleh", "Onyshchak", role = "cph", comment = "Author of the Python code of the WarpAffine function") )
 Maintainer: Lampros Mouselimis <mouselimislampros@gmail.com>
 BugReports: https://github.com/mlampros/OpenImageR/issues
 URL: https://github.com/mlampros/OpenImageR
@@ -22,12 +20,15 @@ SystemRequirements: libarmadillo: apt-get install -y libarmadillo-dev
         install -y libpng-dev (deb), libfftw3-dev: apt-get install -y
         libfftw3-dev (deb), libtiff5-dev: apt-get install -y
         libtiff5-dev (deb)
+Depends: R(>= 3.2.3)
+Imports: Rcpp (>= 0.12.17), graphics, grDevices, grid, shiny, jpeg,
+        png, tiff, R6
 LinkingTo: Rcpp, RcppArmadillo (>= 0.8.0)
 Suggests: testthat, knitr, rmarkdown, covr
 RoxygenNote: 7.1.2
 VignetteBuilder: knitr
 NeedsCompilation: yes
-Packaged: 2022-06-07 12:51:29 UTC; lampros
+Packaged: 2022-08-08 13:16:43 UTC; lampros
 Author: Lampros Mouselimis [aut, cre] (<https://orcid.org/0000-0002-8024-1546>),
   Sight Machine [cph] (findHOGFeatures function of the SimpleCV computer
     vision platform),
@@ -35,6 +36,8 @@ Author: Lampros Mouselimis [aut, cre] (<https://orcid.org/0000-0002-8024-1546>),
     ImageHash python library),
   Mohammad Haghighat [cph] (Gabor Feature Extraction),
   Radhakrishna Achanta [cph] (Author of the C++ code of the SLIC and
-    SLICO algorithms (for commercial use please contact the author))
+    SLICO algorithms (for commercial use please contact the author)),
+  Oleh Onyshchak [cph] (Author of the Python code of the WarpAffine
+    function)
 Repository: CRAN
-Date/Publication: 2022-06-07 14:30:06 UTC
+Date/Publication: 2022-08-08 14:30:02 UTC
