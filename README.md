@@ -172,7 +172,7 @@ chmod -R 777 /home/YOUR_DIR
 
 <br>
 
-The **USER** defaults to *rstudio* but you have to give your **PASSWORD** of preference (see [https://rocker-project.org](https://rocker-project.org/) for more information).
+The **USER** defaults to *rstudio* but you have to give your **PASSWORD** of preference (see [https://rocker-project.org/](https://rocker-project.org/) for more information).
 
 <br>
 
@@ -217,7 +217,7 @@ If you use the code of this repository in your paper or research please cite bot
   title = {{OpenImageR}: An Image Processing Toolkit},
   author = {Lampros Mouselimis},
   year = {2022},
-  note = {R package version 1.2.2},
+  note = {R package version 1.2.4},
   url = {https://CRAN.R-project.org/package=OpenImageR},
 }
 ```
