@@ -1,5 +1,7 @@
 
+
 ## OpenImageR
+
 <br>
 
 The OpenImageR package is an image processing library. It includes functions for image preprocessing, filtering and image recognition. More details on the functionality of OpenImageR can be found in the [first](http://mlampros.github.io/2016/07/08/OpenImageR/), [second](http://mlampros.github.io/2018/08/08/Gabor_Feature_Extraction/) and [third](http://mlampros.github.io/2018/11/09/Image_Segmentation_Superpixels_Clustering/) blog-posts, and in the package Documentation  ( *scroll down for information on how to use the* **docker image** )
@@ -217,7 +219,7 @@ If you use the code of this repository in your paper or research please cite bot
   title = {{OpenImageR}: An Image Processing Toolkit},
   author = {Lampros Mouselimis},
   year = {2022},
-  note = {R package version 1.2.4},
+  note = {R package version 1.2.5},
   url = {https://CRAN.R-project.org/package=OpenImageR},
 }
 ```
