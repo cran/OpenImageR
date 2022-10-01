@@ -157,14 +157,14 @@ imageShow(res)
 
 ## ----fig.width = 1.0, fig.height = 1.0, echo = T, eval = T--------------------
 
-res_delate = delationErosion(im, Filter = c(8,8), method = 'delation')
+res_delate = dilationErosion(im, Filter = c(8,8), method = 'dilation')
 
 imageShow(res_delate)
 
 
 ## ----fig.width = 1.0, fig.height = 1.0, echo = T, eval = T--------------------
 
-res_erosion = delationErosion(im, Filter = c(8,8), method = 'erosion')
+res_erosion = dilationErosion(im, Filter = c(8,8), method = 'erosion')
 
 imageShow(res_erosion)
 

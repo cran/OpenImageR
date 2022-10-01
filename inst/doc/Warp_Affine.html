@@ -12,7 +12,7 @@
 
 <meta name="author" content="Lampros Mouselimis" />
 
-<meta name="date" content="2022-08-24" />
+<meta name="date" content="2022-10-01" />
 
 <title>Warp Affine using R</title>
 
@@ -110,13 +110,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   for (var i = 0; i < sheets.length; i++) {
     if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
     try { var rules = sheets[i].cssRules; } catch (e) { continue; }
-    for (var j = 0; j < rules.length; j++) {
+    var j = 0;
+    while (j < rules.length) {
       var rule = rules[j];
       // check if there is a div.sourceCode rule
-      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") {
+        j++;
+        continue;
+      }
       var style = rule.style.cssText;
       // check if color or background-color is set
-      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      if (rule.style.color === '' && rule.style.backgroundColor === '') {
+        j++;
+        continue;
+      }
       // replace div.sourceCode by a pre.sourceCode rule
       sheets[i].deleteRule(j);
       sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
@@ -142,7 +149,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <h1 class="title toc-ignore">Warp Affine using R</h1>
 <h4 class="author">Lampros Mouselimis</h4>
-<h4 class="date">2022-08-24</h4>
+<h4 class="date">2022-10-01</h4>
 
 
 
@@ -192,7 +199,7 @@ Input Image
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>                    <span class="at">R =</span> r,</span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>                    <span class="at">C =</span> c,</span>
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>                    <span class="at">verbose =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
-<pre><code>## time to complete : 0.0664 secs</code></pre>
+<pre><code>## time to complete : 0.0994 secs</code></pre>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(res_3d)</span></code></pre></div>
 <pre><code>##  num [1:600, 1:600, 1:3] 0 0 0 0 0 0 0 0 0 0 ...</code></pre>
 <p><br></p>
