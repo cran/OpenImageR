@@ -30,13 +30,13 @@ install.packages("OpenImageR")
 
 <br>
 
-or download the latest version from Github using the *devtools* package,
+or download the latest version from Github using the *remotes* package,
 
 <br>
 
 ```R
 
-devtools::install_github('mlampros/OpenImageR')
+remotes::install_github('mlampros/OpenImageR')
  
 
 ```
@@ -216,8 +216,8 @@ If you use the code of this repository in your paper or research please cite bot
 @Manual{,
   title = {{OpenImageR}: An Image Processing Toolkit},
   author = {Lampros Mouselimis},
-  year = {2022},
-  note = {R package version 1.2.8},
+  year = {2023},
+  note = {R package version 1.2.9},
   url = {https://CRAN.R-project.org/package=OpenImageR},
 }
 ```
